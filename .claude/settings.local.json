@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:marcojost.wixsite.com)",
+      "WebSearch",
+      "WebFetch(domain:wi.mit.edu)",
+      "Bash(curl:*)",
+      "Bash(open:*)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:weissman.wi.mit.edu)",
+      "WebFetch(domain:www.science.org)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
