@@ -3,16 +3,16 @@
    =========================== */
 
 :root {
-  --gold: #F2A922;
-  --burgundy: #E85D3A;
-  --cream: #FFF9F5;
-  --charcoal: #2C2C2C;
-  --gold-light: #F7C948;
-  --burgundy-dark: #C4402A;
-  --gray-light: #FFF3EC;
-  --teal: #2A9D8F;
-  --coral: #E76F51;
-  --sunset: #F4845F;
+  --gold: #A8DADC;
+  --burgundy: #457B9D;
+  --cream: #F1FAEE;
+  --charcoal: #1D3557;
+  --gold-light: #c8eaec;
+  --burgundy-dark: #345d77;
+  --gray-light: #E8F4F0;
+  --teal: #1D3557;
+  --coral: #457B9D;
+  --sunset: #A8DADC;
 }
 
 /* Reset */
@@ -62,7 +62,7 @@ img {
 }
 
 section {
-  padding: 80px 0;
+  padding: 64px 0;
 }
 
 section:nth-child(even) {
@@ -101,7 +101,7 @@ h2::after {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(44, 44, 44, 0.92);
+  background: rgba(29, 53, 87, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
@@ -183,12 +183,12 @@ h2::after {
 
 #hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #E85D3A 0%, #F4845F 35%, #F2A922 70%, #2A9D8F 100%);
+  background: linear-gradient(213deg, #1D3557 0%, #457B9D 35%, #A8DADC 70%, #06D6A0 100%);
   padding: 120px 24px 80px;
   overflow: hidden;
 }
@@ -208,7 +208,7 @@ h2::after {
 }
 
 #hero h1 {
-  font-size: 4rem;
+  font-size: 4.7rem;
   color: var(--cream);
   margin-bottom: 16px;
   letter-spacing: 0.02em;
@@ -261,6 +261,16 @@ h2::after {
 .about-photo img {
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  width: 220px;
+}
+
+.figure-caption {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 10px;
+  line-height: 1.4;
+  max-width: 220px;
 }
 
 .about-text p {
@@ -273,10 +283,26 @@ h2::after {
   margin: 28px 0 12px;
 }
 
+.about-centered {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  align-items: start;
+}
+
+.milestones-heading {
+  text-align: left;
+  font-size: 1.4rem;
+  color: var(--coral);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 .milestones {
   list-style: none;
   border-left: 3px solid var(--gold);
   padding-left: 20px;
+  max-width: 500px;
 }
 
 .milestones li {
@@ -637,7 +663,7 @@ footer {
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(44, 44, 44, 0.98);
+    background: rgba(29, 53, 87, 0.98);
     flex-direction: column;
     gap: 0;
     padding: 8px 0;
