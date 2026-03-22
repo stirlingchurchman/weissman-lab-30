@@ -461,6 +461,31 @@ h2::after {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
+/* ---- Travel ---- */
+
+#travel h3 {
+  font-size: 1.3rem;
+  color: var(--coral);
+  margin: 24px 0 8px;
+}
+
+#travel h3:first-of-type {
+  margin-top: 0;
+}
+
+#travel .hotel-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#travel .hotel-list li {
+  padding: 10px 0;
+}
+
+#travel .section-note {
+  margin-top: 24px;
+}
+
 /* ---- Gallery ---- */
 
 .gallery-cta {
