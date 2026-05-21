@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symposium Schedule — Weissman Lab: 30 Years</title>
+  <meta name="description" content="Full symposium schedule for the Weissman Lab 30th Anniversary, Saturday June 6, 2026 at the Whitehead Institute.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Schedule page specific styles */
+    .schedule-page-header {
+      background: linear-gradient(213deg, #1D3557 0%, #457B9D 50%, #A8DADC 100%);
+      padding: 120px 24px 48px;
+      text-align: center;
+    }
+
+    .schedule-page-header h1 {
+      font-size: 2.8rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .schedule-page-header p {
+      color: rgba(255, 248, 240, 0.85);
+      font-size: 1.1rem;
+    }
+
+    .schedule-full {
+      padding: 48px 0 64px;
+    }
+
+    .schedule-full .schedule-block {
+      margin-bottom: 40px;
+    }
+
+    .schedule-full .schedule-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .schedule-block h3 {
+      font-size: 1.35rem;
+      color: var(--coral);
+      margin-bottom: 4px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .session-moderator {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .schedule-item {
+      display: flex;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .schedule-item:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-item .time {
+      flex-shrink: 0;
+      width: 110px;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 0.95rem;
+      padding-top: 2px;
+    }
+
+    .schedule-item .detail {
+      flex: 1;
+    }
+
+    .schedule-item .detail strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .schedule-item .detail .speakers-list {
+      color: var(--charcoal);
+      font-size: 1.1rem;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .schedule-item .detail .speakers-list li {
+      padding: 6px 0;
+      font-weight: 600;
+    }
+
+    .schedule-item .detail .speakers-list li::before {
+      content: "\2022";
+      color: var(--gold);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+    }
+
+    .speaker-title {
+      display: block;
+      font-weight: 400;
+      font-size: 0.88rem;
+      color: #666;
+      margin-top: 1px;
+      padding-left: 1em;
+    }
+
+    .speaker-lab-role {
+      display: block;
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: #999;
+      padding-left: 1em;
+    }
+
+    /* Break items: lighter, visually distinct */
+    .schedule-break {
+      text-align: center;
+      padding: 16px 0;
+      margin: 24px 0;
+      background: var(--gray-light);
+      border-radius: 6px;
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    .schedule-break .time {
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .schedule-break .label {
+      font-weight: 600;
+      color: #777;
+    }
+
+    .schedule-break .sub {
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 650px) {
+      .schedule-page-header h1 {
+        font-size: 2rem;
+      }
+
+      .schedule-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .schedule-item .time {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Weissman Lab 30</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#travel">Travel</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="schedule-page-header">
+    <h1>Symposium Schedule</h1>
+    <p>Saturday, June 6, 2026 &nbsp;&bull;&nbsp; Whitehead Institute Auditorium</p>
+    <p>455 Main Street, Cambridge, MA</p>
+  </div>
+
+  <!-- Full Schedule -->
+  <section class="schedule-full">
+    <div class="container">
+
+      <!-- Coffee -->
+      <div class="schedule-break">
+        <span class="time">8:00 AM</span> &nbsp; <span class="label">Coffee &amp; Catch-Up</span>
+      </div>
+
+      <!-- Opening -->
+      <div class="schedule-block">
+        <h3>Welcome &amp; Opening</h3>
+        <div class="schedule-item">
+          <span class="time">9:00 AM</span>
+          <div class="detail">
+            <strong>Welcome</strong>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <span class="time">9:10 AM</span>
+          <div class="detail">
+            <strong>Opening Remarks</strong>
+            <ul class="speakers-list">
+              <li>Art Horwich</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 1 -->
+      <div class="schedule-block">
+        <h3>Science Session 1 — 1990s</h3>
+        <p class="session-moderator">Moderated by Stirling Churchman</p>
+        <div class="schedule-item">
+          <span class="time">9:25 AM</span>
+          <div class="detail">
+            <ul class="speakers-list">
+              <li>Jade Wang<span class="speaker-title">Professor of Bacteriology, UW-Madison</span><span class="speaker-lab-role">Grad Student, 1996&ndash;2002</span></li>
+              <li>Ben Tu<span class="speaker-title">Professor of Biochemistry, UT Southwestern; HHMI</span><span class="speaker-lab-role">Grad Student, 1998&ndash;2003</span></li>
+              <li>Lev Osherovich<span class="speaker-title">CSO, Nonsense Tx</span><span class="speaker-lab-role">Grad Student, 1997&ndash;2003</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-break">
+        <span class="time">10:25 AM</span> &nbsp; <span class="label">Coffee Break</span>
+      </div>
+
+      <!-- Session 2 -->
+      <div class="schedule-block">
+        <h3>Science Session 2 — 2000s</h3>
+        <p class="session-moderator">Moderated by Britt Adamson</p>
+        <div class="schedule-item">
+          <span class="time">11:00 AM</span>
+          <div class="detail">
+            <ul class="speakers-list">
+              <li>Moto Tanaka<span class="speaker-title">Team Leader, RIKEN Center for Brain Science</span><span class="speaker-lab-role">Postdoc, 2002&ndash;2006</span></li>
+              <li>Martin Jonikas<span class="speaker-title">Professor of Molecular Biology, Princeton; HHMI</span><span class="speaker-lab-role">Grad Student, 2004&ndash;2009</span></li>
+              <li>Nick Ingolia<span class="speaker-title">Professor of MCB, UC Berkeley</span><span class="speaker-lab-role">Postdoc, 2006&ndash;2010</span></li>
+              <li>Gloria Brar<span class="speaker-title">Professor of MCB, UC Berkeley</span><span class="speaker-lab-role">Postdoc, 2008&ndash;2013</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-break">
+        <span class="time">12:20 PM</span> &nbsp; <span class="label">Lunch</span>
+        <br><span class="sub">Whitehead cafeteria &nbsp;&bull;&nbsp; Group photo</span>
+      </div>
+
+      <!-- Session 3 -->
+      <div class="schedule-block">
+        <h3>Science Session 3 — 2010s</h3>
+        <p class="session-moderator">Moderated by Marco Jost</p>
+        <div class="schedule-item">
+          <span class="time">1:30 PM</span>
+          <div class="detail">
+            <ul class="speakers-list">
+              <li>Noam Stern-Ginossar<span class="speaker-title">Professor, Weizmann Institute</span><span class="speaker-lab-role">Postdoc, 2010&ndash;2013</span></li>
+              <li>Luke Gilbert<span class="speaker-title">Core Investigator, Arc Institute; Assoc. Prof., UCSF</span><span class="speaker-lab-role">Postdoc, 2012&ndash;2017</span></li>
+              <li>Britt Adamson<span class="speaker-title">Professor of Molecular Biology, Princeton</span><span class="speaker-lab-role">Postdoc, 2013&ndash;2018</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-break">
+        <span class="time">2:30 PM</span> &nbsp; <span class="label">Coffee Break</span>
+      </div>
+
+      <!-- Session 4 -->
+      <div class="schedule-block">
+        <h3>Science Session 4 — Last Decade</h3>
+        <p class="session-moderator">Moderated by Karina Smolyar</p>
+        <div class="schedule-item">
+          <span class="time">3:00 PM</span>
+          <div class="detail">
+            <ul class="speakers-list">
+              <li>Michelle Chan<span class="speaker-title">Asst. Professor of Molecular Biology, Princeton</span><span class="speaker-lab-role">Postdoc, 2014&ndash;2020</span></li>
+              <li>Dian Yang<span class="speaker-title">Asst. Professor, Columbia</span><span class="speaker-lab-role">Postdoc, 2017&ndash;2023</span></li>
+              <li>Alina Guna<span class="speaker-title">Asst. Professor of Biochemistry, UCSF</span><span class="speaker-lab-role">Postdoc, 2018&ndash;2025</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-break">
+        <span class="time">4:00 PM</span> &nbsp; <span class="label">Break</span>
+      </div>
+
+      <!-- Keynote & Closing -->
+      <div class="schedule-block">
+        <h3>Keynote &amp; Closing</h3>
+        <div class="schedule-item">
+          <span class="time">4:10 PM</span>
+          <div class="detail">
+            <strong>Keynote</strong>
+            <ul class="speakers-list">
+              <li>Peter Kim</li>
+            </ul>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <span class="time">5:00 PM</span>
+          <div class="detail">
+            <strong>Closing Remarks</strong>
+            <ul class="speakers-list">
+              <li>Jonathan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link">
+        <a href="index.html#schedule">&larr; Back to main page</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
