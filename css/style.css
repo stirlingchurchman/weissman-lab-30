@@ -247,8 +247,8 @@ h2::after {
 
 .hero-date {
   font-size: 1.15rem;
-  color: rgba(255, 248, 240, 0.8);
-  margin-bottom: 36px;
+  color: rgba(251, 250, 242, 0.82);
+  margin-bottom: 32px;
   letter-spacing: 0.05em;
 }
 
@@ -740,6 +740,10 @@ footer {
 
   .hero-subtitle {
     font-size: 1.15rem;
+  }
+
+  .hero-date {
+    font-size: 1rem;
   }
 
   h2 {
