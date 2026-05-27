@@ -3,16 +3,16 @@
    =========================== */
 
 :root {
-  --gold: #A8DADC;
-  --burgundy: #457B9D;
-  --cream: #F1FAEE;
-  --charcoal: #1D3557;
-  --gold-light: #c8eaec;
-  --burgundy-dark: #345d77;
-  --gray-light: #E8F4F0;
-  --teal: #1D3557;
-  --coral: #457B9D;
-  --sunset: #A8DADC;
+  --gold: #7880C0;
+  --burgundy: #4F58A3;
+  --cream: #FBFAF2;
+  --charcoal: #252C72;
+  --gold-light: #DDE1F8;
+  --burgundy-dark: #303890;
+  --gray-light: #F0F2FA;
+  --teal: #303890;
+  --coral: #4F58A3;
+  --sunset: #B9BFE8;
 }
 
 /* Reset */
@@ -101,7 +101,7 @@ h2::after {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(29, 53, 87, 0.95);
+  background: rgba(37, 44, 114, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
@@ -110,6 +110,7 @@ h2::after {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,12 +123,15 @@ h2::after {
   color: var(--gold-light) !important;
   font-weight: 700;
   letter-spacing: 0.02em;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: clamp(18px, 2.2vw, 28px);
+  align-items: center;
 }
 
 .nav-links a {
@@ -183,13 +187,13 @@ h2::after {
 
 #hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 52vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(213deg, #1D3557 0%, #457B9D 35%, #A8DADC 70%, #06D6A0 100%);
-  padding: 120px 24px 80px;
+  background: linear-gradient(213deg, #252C72 0%, #303890 38%, #7880C0 72%, #DDE1F8 100%);
+  padding: 112px 24px 64px;
   overflow: hidden;
 }
 
@@ -197,8 +201,8 @@ h2::after {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(247, 201, 72, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 80%, rgba(42, 157, 143, 0.15) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(251, 250, 242, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(120, 128, 192, 0.24) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -207,16 +211,36 @@ h2::after {
   z-index: 1;
 }
 
+.hero-logo-badge {
+  width: clamp(136px, 15vw, 184px);
+  aspect-ratio: 1;
+  margin: 0 auto 18px;
+  padding: clamp(24px, 2.4vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+  border-radius: 50%;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 #hero h1 {
-  font-size: 4.7rem;
+  font-size: clamp(3rem, 6vw, 4.35rem);
   color: var(--cream);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   letter-spacing: 0.02em;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #FFFDE7;
+  color: var(--cream);
   font-weight: 300;
   margin-bottom: 8px;
 }
@@ -446,6 +470,20 @@ h2::after {
   margin-bottom: 10px;
 }
 
+.venue-note {
+  font-size: 0.92rem;
+  color: #5a6776;
+  margin-top: 6px;
+  padding-left: 12px;
+  border-left: 2px solid var(--gold);
+}
+
+.venue-note span {
+  font-weight: 600;
+  color: var(--teal);
+  margin-right: 4px;
+}
+
 .hotel-list {
   list-style: none;
   padding: 0;
@@ -661,23 +699,7 @@ footer {
   }
 }
 
-@media (max-width: 650px) {
-  #hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.15rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  section {
-    padding: 56px 0;
-  }
-
+@media (max-width: 820px) {
   .nav-toggle {
     display: flex;
   }
@@ -688,7 +710,7 @@ footer {
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(29, 53, 87, 0.98);
+    background: rgba(37, 44, 114, 0.98);
     flex-direction: column;
     gap: 0;
     padding: 8px 0;
@@ -702,6 +724,30 @@ footer {
     display: block;
     padding: 14px 24px;
     border-bottom: none;
+  }
+}
+
+@media (max-width: 650px) {
+  #hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-logo-badge {
+    width: 128px;
+    margin-bottom: 16px;
+    padding: 22px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 56px 0;
   }
 
   .speakers-grid {
